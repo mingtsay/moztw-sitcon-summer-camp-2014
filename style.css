@@ -21,17 +21,48 @@ body {
 ul {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 26px 0 0;
     list-style: none;
     width: 100%;
     background: #5c8ae6;
 }
-li a {
+li a, li label {
     display: block;
     border-top: #25375c 2px solid;
     padding: 10px;
     font-size: 28px;
     color: #25375c;
+}
+li a:after {
+    content: '\bb';
+    float: right;
+}
+li label {
+    background: #9cf;
+    cursor: pointer;
+}
+li label span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    position: relative;
+    top: 5px;
+    left: -20px;
+    z-index: 1;
+    background: #333;
+    -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+    margin-right: -5px;
+}
+li label input:checked + span {
+    background: #26ca28;
 }
 div#footer {
     border-top: #3d1400 2px solid;
