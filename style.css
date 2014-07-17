@@ -33,6 +33,9 @@ li a, li label {
     font-size: 28px;
     color: #25375c;
 }
+li a {
+    padding: 14px 10px;
+}
 li a:after {
     content: '\bb';
     float: right;
